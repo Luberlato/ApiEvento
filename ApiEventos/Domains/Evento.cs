@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ApiEventos.Domains;
 
-public partial class Eventos
+public partial class Evento
 {
     public int EventoId { get; set; }
 
@@ -13,11 +13,9 @@ public partial class Eventos
 
     public string LocalRealizacao { get; set; } = null!;
 
-    public int? ParticipanteId { get; set; }
+    public int? UsuarioId { get; set; }
 
-    public int? PalestranteId { get; set; }
+    public virtual ICollection<Inscricao> Inscricao { get; set; } = new List<Inscricao>();
 
-    public virtual Palestrante? Palestrante { get; set; }
-
-    public virtual Participante? Participante { get; set; }
+    public virtual Usuario? Usuario { get; set; }
 }
