@@ -1,0 +1,6 @@
+@ApiEventos_HostAddress = http://localhost:5289
+
+GET {{ApiEventos_HostAddress}}/Swagger/
+Accept: application/json
+
+###
